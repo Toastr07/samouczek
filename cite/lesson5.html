@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 5 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example table { border: 1px solid black; border-collapse: collapse; }
+		div.example th, div.example table td { border: 1px solid black; padding: 4px; }
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html" class="active">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 5: Tabele</h2>
+			<p>
+				Tabele w HTML5 służą wyłącznie do czytelnej prezentacji danych w formie kolumn i wierszy, takich jak cenniki, zestawienia czy harmonogramy. Strukturę tabeli budujemy rzędami od góry do dołu, używając dedykowanych znaczników dzielących dane na sekcje.
+			</p>
+		
+			<h3>Zestaw znaczników tabeli</h3>
+			<p>Znacznik <code>&lt;table&gt;</code> to kontener główny inicjujący tabelę na stronie.</p>
+			<p>Znacznik <code>&lt;caption&gt;</code> to semantyczny podpis tabeli wyświetlany bezpośrednio nad nią.</p>
+			<p>Znacznik <code>&lt;thead&gt;</code> grupuje wiersze nagłówkowe tabeli.</p>
+			<p>Znacznik <code>&lt;tbody&gt;</code> grupuje wiersze zawierające główną treść i dane tabeli.</p>
+			<p>Znacznik <code>&lt;tfoot&gt;</code> grupuje wiersze stanowiące stopkę lub podsumowanie liczbowe tabeli.</p>
+			<p>Znacznik <code>&lt;tr&gt;</code> definiuje pojedynczy, poziomy wiersz tabeli.</p>
+			<p>Znacznik <code>&lt;th&gt;</code> oznacza komórkę nagłówkową. Tekst wewnątrz jest domyślnie pogrubiony i wyśrodkowany.</p>
+			<p>Znacznik <code>&lt;td&gt;</code> to standardowa komórka zawierająca właściwe dane tekstowe lub liczbowe.</p>
+		
+			<h3>Łączenie komórek (colspan i rowspan)</h3>
+			<p>W HTML5 możemy scalać ze sobą sąsiadujące komórki za pomocą dwóch kluczowych atrybutów:</p>
+			<p>Atrybut <code>colspan</code> służy do łączenia komórek w poziomie (scala kolumny). Jako wartość podajemy liczbę kolumn, które dana komórka ma zająć.</p>
+			<p>Atrybut <code>rowspan</code> służy do łączenia komórek w pionie (scala wiersze). Jako wartość podajemy liczbę wierszy, na które dana komórka ma się rozciągać.</p>
+			<p><em>Uwaga: Dokładnego sposobu działania reguł CSS użytych poniżej do wyświetlenia ramek dowiesz się w Lekcjach 10-15.</em></p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Tabela z łączeniem komórek&lt;/title&gt;
+    &lt;style&gt;
+        table { border: 1px solid black; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 4px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;table&gt;
+    &lt;caption&gt;Cennik Kursów&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Kategoria&lt;/th&gt;
+            &lt;th&gt;Nazwa&lt;/th&gt;
+            &lt;th&gt;Cena&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;Web Design&lt;/td&gt;
+            &lt;td&gt;Kurs HTML5&lt;/td&gt;
+            &lt;td&gt;49 zł&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Kurs CSS3&lt;/td&gt;
+            &lt;td&gt;59 zł&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Suma&lt;/td&gt;
+            &lt;td&gt;108 zł&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>Dzięki zastosowaniu stylów w sekcji nagłówkowej, ramki komórek stają się widoczne. Pozwala to wyraźnie dostrzec, jak pierwsza komórka rozciąga się na dwa wiersze w dół, a komórka w stopce scala dwie kolumny w jedną szeroką przestrzeń:</p>
+			<div class="example">
+				<table>
+					<caption>Cennik Kursów</caption>
+					<thead>
+						<tr>
+							<th>Kategoria</th>
+							<th>Nazwa</th>
+							<th>Cena</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2">Web Design</td>
+							<td>Kurs HTML5</td>
+							<td>49 zł</td>
+						</tr>
+						<tr>
+							<td>Kurs CSS3</td>
+							<td>59 zł</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2">Suma</td>
+							<td>108 zł</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji dowiesz się, jak tworzyć hiperłącza oraz nawigację wewnętrzną na stronie za pomocą kotwic.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 14 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example .menu-poziome, div.example .menu-pionowe {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		div.example .menu-poziome li a, div.example .menu-pionowe li a {
+			display: block;
+			color: white;
+			padding: 10px 15px;
+			text-decoration: none;
+			font-family: sans-serif;
+		}
+		div.example .menu-poziome li a:hover, div.example .menu-pionowe li a:hover {
+			background-color: #555;
+		}
+		div.example .menu-poziome {
+			background-color: #333;
+			display: flex;
+			margin-bottom: 20px;
+		}
+		div.example .menu-pionowe {
+			background-color: #2c3e50;
+			width: 200px;
+		}
+		div.example .menu-pionowe li {
+			border-bottom: 1px solid #34495e;
+		}
+		div.example .menu-pionowe li:last-child {
+			border-bottom: none;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html" class="active">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 14: Menu poziome i pionowe</h2>
+			<p>
+				Domyślnie elementy listy <code>&lt;li&gt;</code> są elementami blokowymi i układają się pionowo jeden pod drugim. W zależności od projektu witryny, nawigację możemy przygotować w formie klasycznego, bocznego menu pionowego lub nowoczesnego, poziomego paska za pomocą elastycznego modelu układu o nazwie Flexbox.
+			</p>
+		
+			<h3>Nawigacja pozioma za pomocą Flexboxa</h3>
+			<p>Właściwość <code>display: flex;</code> zadeklarowana na liście nadrzędnej <code>&lt;ul&gt;</code> zmienia domyślny kierunek układania elementów. Sprawia ona, że pozycje menu automatycznie ustawiają się w jednej poziomej linii obok siebie.</p>
+			<p>Właściwość <code>list-style-type: none;</code> usuwa standardowe kropki wypunktowania z listy, a reset marginesów pozwala na równe rozłożenie paska.</p>
+		
+			<h3>Nawigacja pionowa (Blokowa)</h3>
+			<p>W menu pionowym elementy celowo zostawiamy jeden pod drugim. Często ogranicza się wtedy szerokość całego menu za pomocą właściwości <code>width</code> na kontenerze nadrzędnym.</p>
+			<p>W obu wariantach kluczowe jest przekształcenie linków w elementy blokowe za pomocą <code>display: block;</code> oraz dodanie odstępów <code>padding</code>. Gwarantuje to, że klikalny staje się cały obszar przycisku menu, a nie tylko sam tekst.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Menu Poziome i Pionowe&lt;/title&gt;
+    &lt;style&gt;
+        .menu-poziome, .menu-pionowe {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu-poziome li a, .menu-pionowe li a {
+            display: block;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        .menu-poziome li a:hover, .menu-pionowe li a:hover {
+            background-color: #555;
+        }
+
+        .menu-poziome {
+            background-color: #333;
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .menu-pionowe {
+            background-color: #2c3e50;
+            width: 200px;
+        }
+        .menu-pionowe li {
+            border-bottom: 1px solid #34495e;
+        }
+        .menu-pionowe li:last-child {
+            border-bottom: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h3&gt;Przykład menu poziomego:&lt;/h3&gt;
+&lt;ul class="menu-poziome"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Start&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Galeria&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Przykład menu pionowego:&lt;/h3&gt;
+&lt;ul class="menu-pionowe"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Profil&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Ustawienia&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Wyloguj&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>Poniżej możesz zaobserwować oba warianty nawigacji wyrenderowane obok siebie. Menu poziome zajmuje pełną szerokość i świetnie sprawdza się na górze strony, natomiast menu pionowe ma ograniczoną szerokość do 200 pikseli i posiada delikatne linie oddzielające poszczególne opcje:</p>
+			<div class="example">
+				<h4 style="font-family: sans-serif; margin-bottom: 5px;">Podgląd menu poziomego:</h4>
+				<ul class="menu-poziome">
+					<li><a href="#">Start</a></li>
+					<li><a href="#">Galeria</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+				<h4 style="font-family: sans-serif; margin-bottom: 5px;">Podgląd menu pionowego:</h4>
+				<ul class="menu-pionowe">
+					<li><a href="#">Profil</a></li>
+					<li><a href="#">Ustawienia</a></li>
+					<li><a href="#">Wyloguj</a></li>
+				</ul>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji dowiesz się, jak modyfikować style strony, aby automatycznie dostosowywały się do ekranów smartfonów.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

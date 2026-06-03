@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 12 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example .blok-pokazowy {
+			border: 3px dashed #333;
+			border-radius: 15px;
+			padding: 20px;
+			background-color: #fafafa;
+			font-family: sans-serif;
+		}
+		div.example table {
+			width: 100%;
+			border-collapse: collapse;
+			background-color: white;
+			margin-top: 10px;
+		}
+		div.example th, div.example td {
+			border: 1px solid #333;
+			padding: 8px;
+			text-align: left;
+		}
+		div.example th {
+			background-color: #2c3e50;
+			color: white;
+		}
+		div.example tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html" class="active">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 12: Obramowania i tabele</h2>
+			<p>
+				Warstwa obramowania (Border) jest integralną częścią każdego modelu pudełkowego. Za pomocą stylów CSS możemy nie tylko kontrolować wygląd, grubość i kolor krawędzi, ale również wykorzystać te właściwości do estetycznego sformatowania tabel poznanych w części HTML5.
+			</p>
+		
+			<h3>Obramowanie elementów (Właściwości border)</h3>
+			<p>Obramowanie pozwala na rysowanie linii wokół elementów oraz modyfikowanie ich kształtu. Składa się z trzech podstawowych parametrów, które możemy zapisać w jednej linii za pomocą właściwości skróconej <code>border: grubość styl kolor;</code>:</p>
+			<p><strong>Grubość ramki</strong> definiujemy najczęściej w pikselach (np. <code>2px</code>).</p>
+			<p><strong>Styl ramki</strong> określa jej wygląd. Najważniejsze style to: <code>solid</code> (linia ciągła), <code>dashed</code> (linia kreskowana), <code>dotted</code> (linia kropkowana) oraz <code>none</code> (brak obramowania).</p>
+			<p><strong>Kolor ramki</strong> podajemy słownie lub za pomocą kodu szesnastkowego (np. <code>black</code> lub <code>#333</code>).</p>
+			<p>Możemy stylizować każdą krawędź osobno za pomocą właściwości kierunkowych: <code>border-top</code> (góra), <code>border-bottom</code> (dół), <code>border-left</code> (lewa) oraz <code>border-right</code> (prawa).</p>
+			<p>Właściwość <code>border-radius</code> służy do zaokrąglania rogów obramowania oraz całego pudełka. Wartość podana w pikselach (np. <code>10px</code>) zaokrągla rogi delikatnie, natomiast wartość <code>50%</code> pozwala na stworzenie idealnego koła z kwadratowego elementu.</p>
+		
+			<h3>Stylowanie tabel w CSS</h3>
+			<p>Tabele domyślnie wyświetlają się w przeglądarce bez ramek lub z nieestetycznymi podwójnymi liniami. Za pomocą właściwości stylów możemy w pełni kontrolować ich wygląd:</p>
+			<p>Właściwość <code>border-collapse: collapse;</code> zadeklarowana na znaczniku <code>&lt;table&gt;</code> usuwa puste przestrzenie między komórkami i scala podwójne linie ramek w jedną pojedynczą linię.</p>
+			<p>Właściwości <code>padding</code> oraz <code>border</code> przypisane do komórek <code>&lt;th&gt;</code> oraz <code>&lt;td&gt;</code> pozwalają na ustawienie grubości ramki i odsunięcie tekstu od jej krawędzi, co diametralnie poprawia czytelność danych.</p>
+			<p>Selektor <code>tr:nth-child(even)</code> (lub <code>odd</code>) pozwala na automatyczne nadanie innego koloru tła co drugiemu wierszowi w tabeli (tzw. efekt zebry), co ułatwia śledzenie wzrokiem szerokich danych.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Stylowanie obramowań i tabel&lt;/title&gt;
+    &lt;style&gt;
+        .blok-pokazowy {
+            border: 3px dashed #333;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="blok-pokazowy"&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Przedmiot&lt;/th&gt;
+                &lt;th&gt;Ocena&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Podstawy HTML5&lt;/td&gt;
+                &lt;td&gt;Bardzo dobry&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Arkusze CSS3&lt;/td&gt;
+                &lt;td&gt;Celujący&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>W poniższym podglądzie możesz zobaczyć zastosowanie różnych typów obramowań. Kontener zewnętrzny posiada ciemnoszarą, kreskowaną ramkę i zaokrąglone rogi (border-radius), z kolei tabela wewnątrz korzysta ze scalonych, pojedynczych linii ciągłych oraz naprzemiennych kolorów wierszy:</p>
+			<div class="example">
+				<div class="blok-pokazowy">
+					<table style="margin-top: 0;">
+						<thead>
+							<tr>
+								<th>Przedmiot</th>
+								<th>Ocena</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Podstawy HTML5</td>
+								<td>Bardzo dobry</td>
+							</tr>
+							<tr>
+								<td>Arkusze CSS3</td>
+								<td>Celujący</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji dowiesz się, jak zarządzać tłem elementów – od jednolitych kolorów po zaawansowane pozycjonowanie grafik.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

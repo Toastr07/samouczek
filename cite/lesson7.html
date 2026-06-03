@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 7 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html" class="active">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 7: Multimedia</h2>
+			<p>
+				HTML5 pozwala na bezpośrednie osadzanie plików graficznych oraz odtwarzaczy wideo i audio bez konieczności instalowania dodatkowych wtyczek w przeglądarce. Elementy te odtwarzane są natywnie i stabilnie.
+			</p>
+		
+			<h3>Znaczniki multimedialne</h3>
+			<p>Znacznik <code>&lt;img&gt;</code> to element pojedynczy wstawiający plik graficzny. Wymaga atrybutu <code>src=""</code> (ścieżka do pliku) oraz <code>alt=""</code> (tekst alternatywny opisujący zawartość obrazu).</p>
+			<p>Znacznik <code>&lt;video&gt;</code> to element podwójny osadzający odtwarzacz filmów na stronie.</p>
+			<p>Znacznik <code>&lt;audio&gt;</code> to element podwójny służący do osadzania utworów lub nagrań dźwiękowych.</p>
+			<p>Znacznik <code>&lt;source&gt;</code> to element pojedynczy stosowany wewnątrz wideo lub audio, który pozwala podać ten sam plik w kilku formatach (np. mp4 i webm) na wypadek braku obsługi danego kodeka przez przeglądarkę.</p>
+			<p>Atrybut <code>controls</code> wymusza na przeglądarce wyświetlenie standardowych przycisków odtwarzania, pauzy oraz suwaka głośności.</p>
+			<p>Znacznik <code>&lt;iframe&gt;</code> tworzy ramkę, która pozwala osadzić zewnętrzną zawartość z innych serwisów, na przykład mapy Google czy filmy z serwisu YouTube.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Multimedia na stronie&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h3&gt;Grafika&lt;/h3&gt;
+&lt;img src="logo.png" alt="Logo HTML5" width="200"&gt;
+
+&lt;h3&gt;Odtwarzacz Wideo&lt;/h3&gt;
+&lt;video controls width="320"&gt;
+    &lt;source src="film.mp4" type="video/mp4"&gt;
+    Twoja przeglądarka nie obsługuje odtwarzacza wideo.
+&lt;/video&gt;
+
+&lt;h3&gt;Odtwarzacz Audio&lt;/h3&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Twoja przeglądarka nie obsługuje odtwarzacza audio.
+&lt;/audio&gt;
+
+&lt;h3&gt;Osadzanie zewnętrzne (Iframe)&lt;/h3&gt;
+&lt;iframe src="https://example.com" width="100%" height="200" style="border:0;"&gt;&lt;/iframe&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<div class="example">
+				<h3>Grafika</h3>
+				<img src="../media/img.png" alt="Logo HTML5" width="200">
+				<h3>Odtwarzacz Wideo</h3>
+				<video controls width="100%">
+					<source src="../media/video.mp4" type="video/mp4">
+					Twoja przeglądarka nie obsługuje odtwarzacza wideo.
+				</video>
+				<h3>Odtwarzacz Audio</h3>
+				<audio controls style="width: 100%;">
+					<source src="../media/audio.mp3" type="audio/mpeg">
+					Twoja przeglądarka nie obsługuje odtwarzacza audio.
+				</audio>
+				<h3>Osadzanie zewnętrzne (Iframe)</h3>
+				<iframe src="https://example.com" width="100%" height="150" style="border:0;"></iframe>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji nauczysz się projektować formularze do zbierania wiadomości i danych od użytkowników.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

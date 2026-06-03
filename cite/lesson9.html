@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 9 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example header, div.example footer { background-color: #333; color: white; padding: 10px; font-family: sans-serif; }
+		div.example nav a { color: #f1c40f; text-decoration: none; margin-right: 15px; }
+		div.example main { background-color: #f4f4f4; padding: 15px; font-family: sans-serif; }
+		div.example aside { background-color: #e0e0e0; padding: 10px; margin-top: 15px; }
+		div.example .wyroznienie { color: red; font-weight: bold; }
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html" class="active">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 9: Dodatkowe znaczniki i atrybuty</h2>
+			<p>
+				Współczesny HTML5 kładzie nacisk na semantykę, czyli na to, aby znaczniki opisywały swoją rolę i znaczenie na stronie. Zamiast używać uniwersalnych kontenerów do wszystkiego, stosujemy elementy, które jasno informują przeglądarkę oraz wyszukiwarki internetowe, jaka treść znajduje się w danym miejscu dokumentu.
+			</p>
+		
+			<h3>Znaczniki strukturalne (Semantyczne)</h3>
+			<p>Znacznik <code>&lt;header&gt;</code> reprezentuje nagłówek strony lub danej sekcji. Zazwyczaj zawiera logo, nazwę witryny, menu nawigacyjne lub informacje o autorze i dacie publikacji.</p>
+			<p>Znacznik <code>&lt;nav&gt;</code> określa sekcję przeznaczoną wyłącznie na linki nawigacyjne. Powinien grupować główne menu strony, spisy treści lub odnośniki do najważniejszych podstron.</p>
+			<p>Znacznik <code>&lt;main&gt;</code> definiuje główną, unikalną zawartość dokumentu. Treść wewnątrz tego znacznika nie powinna powtarzać się na innych stronach (np. w stopkach czy panelach bocznych). Na całej podstronie może wystąpić tylko jeden taki znacznik.</p>
+			<p>Znacznik <code>&lt;article&gt;</code> reprezentuje niezależną, samodzielną kompozycję, którą można by było wyciąć ze strony i rozpowszechniać osobno. Idealnie nadaje się na wpisy blogowe, artykuły informacyjne lub komentarze użytkowników.</p>
+			<p>Znacznik <code>&lt;section&gt;</code> służy do wydzielania ogólnych sekcji tematycznych w dokumencie. Zazwyczaj każda sekcja posiada swój własny, wewnętrzny nagłówek.</p>
+			<p>Znacznik <code>&lt;aside&gt;</code> definiuje panel boczny lub treść poboczną. Zawiera informacje, które są powiązane z głównym tekstem tylko pośrednio. Najczęściej umieszcza się w nim dodatkowe widgety, reklamy, listy tagów, archiwa wpisów lub krótkie notki biograficzne autora.</p>
+			<p>Znacznik <code>&lt;footer&gt;</code> reprezentuje stopkę strony lub danej sekcji. Standardowo umieszcza się w niej informacje o prawach autorskich, linki do regulaminów oraz dane kontaktowe.</p>
+		
+			<h3>Kontenery uniwersalne i atrybuty globalne</h3>
+			<p>Znacznik <code>&lt;div&gt;</code> to uniwersalny kontener blokowy bez znaczenia semantycznego. Służy wyłącznie do grupowania elementów w celu ich późniejszego układania i stylizowania w CSS.</p>
+			<p>Znacznik <code>&lt;span&gt;</code> to uniwersalny kontener liniowy (inline). Służy do wydzielania małych fragmentów wewnątrz tekstu (np. pojedynczych słów), aby zmienić ich wygląd.</p>
+			<p>Atrybut globalny <code>class=""</code> to identyfikator grupowy. Tę samą klasę możesz przypisać do wielu elementów na stronie, co pozwala na jednoczesną zmianę ich wyglądu w CSS.</p>
+			<p>Atrybut globalny <code>id=""</code> to unikalny identyfikator elementu. Dana wartość może wystąpić na stronie tylko jeden raz i służy do precyzyjnego wskazania jednej, konkretnej rzeczy.</p>
+			<p><em>Uwaga: Dokładnego sposobu działania reguł CSS użytych poniżej do ostylowania elementów semantycznych dowiesz się w późniejszych lekcjach (Lekcje 10-15).</em></p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Struktura semantyczna witryny&lt;/title&gt;
+    &lt;style&gt;
+        header, footer { background-color: #333; color: white; padding: 10px; }
+        nav a { color: #f1c40f; text-decoration: none; margin-right: 15px; }
+        main { background-color: #f4f4f4; padding: 15px; }
+        aside { background-color: #e0e0e0; padding: 10px; margin-top: 15px; }
+        .wyroznienie { color: red; font-weight: bold; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+    &lt;h1&gt;Mój Portal Informacyjny&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#"&gt;Start&lt;/a&gt;
+        &lt;a href="#"&gt;Blog&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header>
+
+&lt;main id="glowna-zawartosc"&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Aktualności&lt;/h2&gt;
+        &lt;article&gt;
+            &lt;h3&gt;Nowości w świecie HTML5&lt;/h3&gt;
+            &lt;p&gt;Semantyka pozwala lepiej &lt;span class="wyroznienie"&gt;zrozumieć&lt;/span&gt; strukturę dokumentu przez roboty sieciowe.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+        &lt;h4&gt;O autorze&lt;/h4&gt;
+        &lt;p&gt;Cześć! Jestem programistą i dzielę się tutaj swoją wiedzą o tworzeniu stron.&lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Prawa autorskie &amp;copy; 2026&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>Poniżej możesz zaobserwować, jak poszczególne sekcje dzielą dokument. Zwróć uwagę na szary blok na dole głównej zawartości – reprezentuje on znacznik poboczny, który dostarcza dodatkowe informacje o autorze niezależnie od głównego tekstu artykułu:</p>
+			<div class="example">
+				<header>
+					<h1 style="margin: 0; font-size: 24px;">Mój Portal Informacyjny</h1>
+					<nav style="margin-top: 5px;">
+						<a href="#">Start</a>
+						<a href="#">Blog</a>
+					</nav>
+				</header>
+				<main>
+					<section>
+						<h2 style="margin-top: 0; font-size: 20px;">Aktualności</h2>
+						<article>
+							<h3 style="font-size: 16px; margin-bottom: 5px;">Nowości w świecie HTML5</h3>
+							<p style="margin-top: 0;">Semantyka pozwala lepiej <span class="wyroznienie">zrozumieć</span> strukturę dokumentu przez roboty sieciowe.</p>
+						</article>
+					</section>
+					<aside>
+						<h4 style="margin-top: 0; margin-bottom: 5px; font-size: 14px;">O autorze</h4>
+						<p style="margin-top: 0; margin-bottom: 0; font-size: 13px;">Cześć! Jestem programistą i dzielę się tutaj swoją wiedzą o tworzeniu stron.</p>
+					</aside>
+				</main>
+				<footer>
+					<p style="margin: 0; font-size: 12px;">Prawa autorskie &copy; 2026</p>
+				</footer>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji wprowadzimy kaskadowe arkusze stylów (CSS), aby nadać naszej stronie kolory i profesjonalny wygląd.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

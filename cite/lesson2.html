@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 2 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html" class="active">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 2: Podstawowa struktura strony</h2>
+			<p>
+				Każdy dokument HTML5 posiada ściśle określoną strukturę, która pozwala przeglądarce prawidłowo odczytać i wyświetlić kod. Witryna dzieli się na dwie główne sekcje: nagłówkową (konfiguracyjną) oraz właściwą treść strony.
+			</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="description" content="Kurs HTML5 i CSS od podstaw - kompletny przewodnik."&gt;
+    &lt;meta name="keywords" content="HTML, CSS, kurs, nauka, programowanie"&gt;
+    &lt;meta name="author" content="Jan Kowalski"&gt;
+    &lt;title&gt;Moja Pierwsza Strona&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Witaj na mojej stronie internetowej!
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Analiza struktury pliku</h3>
+			<p>Znacznik <code>&lt;!DOCTYPE html&gt;</code> to deklaracja typu dokumentu. Informuje przeglądarkę, że kod został napisany w najnowszym standardzie HTML5, dzięki czemu cała strona wyświetla się poprawnie i stabilnie.</p>
+			<p>Znacznik <code>&lt;html lang="pl"&gt;</code> to znacznik główny, który spina cały dokument. Atrybut <code>lang="pl"</code> definiuje główny język witryny, co ułatwia pracę wyszukiwarkom internetowym oraz programom czytającym tekst na głos (syntezatorom mowy).</p>
+			<p>Znacznik <code>&lt;head&gt;</code> to sekcja konfiguracyjna. Zawiera informacje techniczne oraz metadane, które nie są widoczne bezpośrednio na podstronie.</p>
+			<p>Znacznik <code>&lt;meta charset="UTF-8"&gt;</code> definiuje kodowanie znaków, co gwarantuje poprawne wyświetlanie polskich liter takich jak ą, ę, ś, ć.</p>
+			<p>Znacznik <code>&lt;meta name="description"&gt;</code> zawiera opis strony wyświetlany pod linkiem w wynikach wyszukiwania Google (tzw. snippet).</p>
+			<p>Znacznik <code>&lt;meta name="keywords"&gt;</code> określa słowa kluczowe opisujące tematykę strony dla robotów indeksujących.</p>
+			<p>Znacznik <code>&lt;meta name="author"&gt;</code> dostarcza informację o autorze kodu źródłowego dokumentu.</p>
+			<p>Znacznik <code>&lt;title&gt;</code> określa tytuł, który pojawia się na karcie przeglądarki oraz w wynikach wyszukiwania Google.</p>
+			<p>Znacznik <code>&lt;body&gt;</code> to sekcja zawierająca właściwą treść witryny. Wszystkie elementy umieszczone w tym miejscu są bezpośrednio widoczne dla użytkownika na ekranie.</p>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji poznasz znaczniki przeznaczone do formatowania, wyróżniania i organizacji tekstu na stronie.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

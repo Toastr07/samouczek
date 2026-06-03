@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 10 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example p.lekcja10-normal { font-size: 16px; color: black; font-weight: normal; }
+		div.example p.lekcja10-zielony { font-size: 16px; color: green; font-weight: bold; }
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html" class="active">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 10: Wprowadzenie do CSS</h2>
+			<p>
+				CSS (Cascading Style Sheets) odpowiada za wygląd i oprawę wizualną strony internetowej. Podczas gdy HTML tworzy szkielet i treść, CSS nadaje jej kolory, wielkość czcionek i odpowiednie układy. Reguła CSS składa się z selektora oraz bloku stylów zamkniętego w klamrach.
+			</p>
+		
+			<h3>Budowa reguły CSS</h3>
+			<p>Styl definiujemy za pomocą zapisu: <code>selektor { właściwość: wartość; }</code>.</p>
+			<p>Selektor znacznika (np. <code>p</code>) odnosi się do wszystkich akapitów na stronie.</p>
+			<p>Selektor klasy oznaczamy w pliku CSS kropką (np. <code>.zielony</code>) i odnosi się on do elementów z atrybutem <code>class="zielony"</code>.</p>
+			<p>Właściwość <code>color</code> definiuje kolor tekstu, a właściwość <code>font-size</code> odpowiada za wielkość czcionki.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Wprowadzenie do CSS&lt;/title&gt;
+    &lt;style&gt;
+        p { font-size: 16px; }
+        .zielony { color: green; font-weight: bold; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Jestem zwykłym tekstem.&lt;/p&gt;
+&lt;p class="zielony"&gt;Jestem tekstem z klasą zielony.&lt;/p>
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<div class="example">
+				<p class="lekcja10-normal">Jestem zwykłym tekstem.</p>
+				<p class="lekcja10-zielony">Jestem tekstem z klasą zielony.</p>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji poznasz model pudełkowy, czyli absolutną podstawę układania i wymiarowania elementów w CSS.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

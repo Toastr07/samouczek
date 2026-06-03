@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 15 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example .kontener {
+			width: 80%;
+			background-color: blue;
+			color: white;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		@media (max-width: 600px) {
+			div.example .kontener {
+				width: 100%;
+				background-color: red;
+			}
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html" class="active">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 15: Strony responsywne</h2>
+			<p>
+				Responsywność (Responsive Web Design) to technika tworzenia stron, które automatycznie dopasowują swój układ, wielkości elementów oraz czcionek do szerokości ekranu urządzenia (np. komputera lub telefonu). Wykorzystuje się do tego reguły warunkowe.
+			</p>
+		
+			<h3>Zapytania mediów (Media Queries)</h3>
+			<p>Podstawą stron responsywnych jest reguła <code>@media</code>. Pozwala ona na zaaplikowanie konkretnych stylów CSS tylko wtedy, gdy ekran spełnia określony warunek szerokości.</p>
+			<p>Zapis <code>(max-width: 600px)</code> informuje przeglądarkę, że style zapisane wewnątrz klamer mają uruchomić się wyłącznie na ekranach o szerokości mniejszej lub równej 600 pikseli.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Strona Responsywna&lt;/title&gt;
+    &lt;style&gt;
+        .kontener {
+            width: 80%;
+            background-color: blue;
+            color: white;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            .kontener {
+                width: 100%;
+                background-color: red;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="kontener"&gt;Zmień szerokość okna&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>Jeśli zmniejszysz szerokość okna przeglądarki poniżej 600 pikseli, zobaczysz, jak poniższy element automatycznie zmieni swój kolor oraz szerokość:</p>
+			<div class="example">
+				<div class="kontener">Zmień szerokość okna</div>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W ostatniej lekcji nauczysz się dodawać efekty wizualne w postaci płynnych animacji i przejść stanów elementów.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

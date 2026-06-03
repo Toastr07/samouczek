@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 13 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+	<style>
+		div.example .sekcja-tla {
+			width: 100%;
+			height: 200px;
+			background-color: #2c3e50;
+			background-image: url("../media/background.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			color: white;
+			padding: 20px;
+			box-sizing: border-box;
+			display: flex;
+			align-items: flex-end;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-shadow: 1px 1px 5px black;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html" class="active">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 13: Właściwości związane z tłem</h2>
+			<p>
+				CSS oferuje zaawansowane narzędzia do zarządzania tłem całej strony lub jej pojedynczych sekcji. Za pomocą tła możesz całkowicie odmienić wygląd elementów, nakładając kolory lub pliki graficzne.
+			</p>
+		
+			<h3>Kluczowe właściwości tła</h3>
+			<p>Właściwość <code>background-color</code> określa jednolity kolor tła elementu (np. słownie lub jako kod szesnastkowy).</p>
+			<p>Właściwość <code>background-image</code> wczytuje plik graficzny jako tło za pomocą ścieżki podanej w strukturze <code>url('plik.jpg')</code>.</p>
+			<p>Właściwość <code>background-repeat</code> kontroluje powtarzanie obrazka. Wartość <code>no-repeat</code> sprawia, że wyświetla się on tylko jeden raz.</p>
+			<p>Właściwość <code>background-position</code> ustawia miejsce początkowe tła (np. <code>center</code> czyli na środku).</p>
+			<p>Właściwość <code>background-size</code> odpowiada za rozmiar tła. Wartość <code>cover</code> automatycznie i proporcjonalnie skaluje obraz, aby całkowicie pokrył on dostępny ekran.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Właściwości tła&lt;/title&gt;
+    &lt;style&gt;
+        .sekcja-tla {
+            width: 100%;
+            height: 200px;
+            background-color: #2c3e50;
+            background-image: url('tlo_test.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="sekcja-tla"&gt;&lt;/div>
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>Poniżej możesz zobaczyć na żywo działanie właściwości tła. W tym przykładzie użyliśmy prawdziwego, zewnętrznego adresu URL z grafiką geometryczną, aby pokazać, jak przeglądarka automatycznie centruje oraz rozciąga obraz na pełną szerokość dostępnego kontenera:</p>
+			<div class="example">
+				<div class="sekcja-tla">Obraz tła wyskalowany za pomocą background-size: cover;</div>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji wykorzystasz wiedzę o listach i modelu pudełkowym, aby zbudować profesjonalne menu nawigacyjne.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

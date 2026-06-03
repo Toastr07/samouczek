@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 4 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html" class="active">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 4: Listy</h2>
+			<p>
+				Listy służą do porządkowania danych i grupowania powiązanych ze sobą elementów. W HTML5 wyróżniamy trzy typy list: nieuporządkowane, uporządkowane oraz listy opisowe (definicji). Każda pozycja na liście musi być zamknięta w osobnym znaczniku.
+			</p>
+		
+			<h3>Typy list i ich elementy</h3>
+			<p>Znacznik <code>&lt;ul&gt;</code> definiuje listę nieuporządkowaną. Przeglądarka automatycznie dodaje wcięcie w tekście oraz oznacza elementy standardowymi kropkami.</p>
+			<p>Znacznik <code>&lt;ol&gt;</code> definiuje listę uporządkowaną. Przeglądarka sama generuje numery dla kolejnych pozycji.</p>
+			<p>Atrybut <code>type</code> w liście uporządkowanej zmienia styl numeracji (1, a, A, i, I), a atrybut <code>start</code> definiuje liczbę początkową.</p>
+			<p>Znacznik <code>&lt;li&gt;</code> to pojedynczy element listy. Może występować wyłącznie wewnątrz znacznika <code>&lt;ul&gt;</code> lub <code>&lt;ol&gt;</code>.</p>
+			<p>Znacznik <code>&lt;dl&gt;</code> inicjuje listę opisową, służącą do tworzenia słowników lub spisów pojęć.</p>
+			<p>Znacznik <code>&lt;dt&gt;</code> oznacza pojęcie lub termin w liście opisowej.</p>
+			<p>Znacznik <code>&lt;dd&gt;</code> zawiera właściwy opis lub definicję pojęcia zadeklarowanego w wyższym elemencie.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Przykłady list&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h3&gt;Lista zakupów (wypunktowana z zagnieżdżeniem)&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Pieczywo&lt;/li&gt;
+    &lt;li&gt;Owoce
+        &lt;ul&gt;
+            &lt;li&gt;Jabłka&lt;/li&gt;
+            &lt;li&gt;Banany&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Podium wyścigu (rzymskie cyfry)&lt;/h3&gt;
+&lt;ol type="I" start="1"&gt;
+    &lt;li&gt;Miejsce pierwsze&lt;/li&gt;
+    &lt;li&gt;Miejsce drugie&lt;/li&gt;
+&lt;/ol>
+
+&lt;h3&gt;Słowniczek pojęć (opisowa)&lt;/h3&gt;
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt>
+    &lt;dd&gt;Język znaczników do tworzenia struktury stron internetowych.&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt>
+    &lt;dd&gt;Arkusz stylów odpowiedzialny za warstwę wizualną.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<div class="example">
+				<h3>Lista zakupów (wypunktowana z zagnieżdżeniem)</h3>
+				<ul>
+					<li>Pieczywo</li>
+					<li>Owoce
+						<ul>
+							<li>Jabłka</li>
+							<li>Banany</li>
+						</ul>
+					</li>
+				</ul>
+				<h3>Podium wyścigu (rzymskie cyfry)</h3>
+				<ol type="I" start="1">
+					<li>Miejsce pierwsze</li>
+					<li>Miejsce drugie</li>
+				</ol>
+				<h3>Słowniczek pojęć (opisowa)</h3>
+				<dl>
+					<dt>HTML</dt>
+					<dd>Język znaczników do tworzenia struktury stron internetowych.</dd>
+					<dt>CSS</dt>
+					<dd>Arkusz stylów odpowiedzialny za warstwę wizualną.</dd>
+				</dl>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji nauczysz się prezentować zaawansowane dane strukturalne za pomocą tabel oraz poznasz atrybuty łączenia komórek.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

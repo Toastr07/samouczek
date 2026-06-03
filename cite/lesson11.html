@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 11 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		div.example .rodzic-pudelko {
+			box-sizing: border-box;
+			position: relative;
+			width: 300px;
+			height: 150px;
+			background-color: lightgray;
+			padding: 20px;
+			font-family: sans-serif;
+		}
+		div.example .element-absolutny {
+			box-sizing: border-box;
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			width: 100px;
+			height: 40px;
+			background-color: gold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html" class="active">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 11: Model pudełkowy i pozycjonowanie</h2>
+			<p>
+				W CSS każdy element widoczny na stronie jest traktowany przez przeglądarkę jako prostokątne pudełko. Zrozumienie modelu pudełkowego (Box Model) oraz mechanizmów pozycjonowania (Positioning) pozwala kontrolować wymiary, wewnętrzne i zewnętrzne odstępy, a także fizyczne lokowanie elementów w oknie przeglądarki.
+			</p>
+		
+			<h3>Składowe Modelu Pudełkowego</h3>
+			<p>Każdy obiekt na stronie składa się z czterech warstw układających się od wewnątrz do zewnątrz:</p>
+			<p><strong>Content (Zawartość)</strong> – obszar zajmowany przez właściwą treść, czyli tekst lub obrazek. Jego rozmiar określają właściwości <code>width</code> (szerokość) i <code>height</code> (wysokość).</p>
+			<p><strong>Padding (Margines wewnętrzny)</strong> – wolna przestrzeń pomiędzy treścią a krawędzią elementu. Przyjmuje on kolor tła przypisany do tego elementu.</p>
+			<p><strong>Border (Obramowanie)</strong> – właściwa ramka otaczająca padding i treść, której naukę szczegółowo omówimy w kolejnej części samouczka.</p>
+			<p><strong>Margin (Margines zewnętrzny)</strong> – całkowicie przezroczysta przestrzeń, która odsuwa dany element od innych sąsiadujących obiektów na stronie.</p>
+		
+			<h3>Właściwość box-sizing</h3>
+			<p>Domyślnie dodanie paddingu powiększa fizyczny rozmiar elementu na ekranie. Aby temu zapobiec, stosuje się właściwość <code>box-sizing: border-box;</code>. Sprawia ona, że padding mieści się wewnątrz zadeklarowanej szerokości, co chroni układ strony przed rozjeżdżaniem się.</p>
+		
+			<h3>Pozycjonowanie elementów (Właściwość position)</h3>
+			<p>Właściwość <code>position</code> pozwala określić, w jaki sposób element ma być rozmieszczony na stronie. Do sterowania pozycją używamy właściwości kierunkowych: <code>top</code> (od góry), <code>bottom</code> (od dołu), <code>left</code> (od lewej) oraz <code>right</code> (od prawej). Wyróżniamy cztery główne typy pozycjonowania:</p>
+			<p><strong>position: static;</strong> – pozycjonowanie domyślne. Element układa się naturalnie w tekście jeden po drugim. Właściwości przesunięcia (np. top, left) tutaj nie działają.</p>
+			<p><strong>position: relative;</strong> – pozycjonowanie relatywne (względne). Element zostaje przesunięty względem swojego pierwotnego miejsca, ale pozostawia po sobie puste pole w pierwotnej lokalizacji.</p>
+			<p><strong>position: absolute;</strong> – pozycjonowanie absolutne (bezwzględne). Element zostaje całkowicie wyrwany z naturalnego układu strony i nie zajmuje w nim miejsca. Jest pozycjonowany względem najbliższego rodzica, który ma ustawione pozycjonowanie inne niż static (najczęściej nadaje się rodzicowi position: relative;).</p>
+			<p><strong>position: fixed;</strong> – pozycjonowanie stałe. Element zostaje przyklejony do określonego miejsca na ekranie i nie porusza się nawet podczas przewijania okna.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Model Pudełkowy i Pozycjonowanie&lt;/title&gt;
+    &lt;style&gt;
+        .rodzic-pudelko {
+            box-sizing: border-box;
+            position: relative;
+            width: 300px;
+            height: 150px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+        .element-absolutny {
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: 40px;
+            background-color: gold;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="rodzic-pudelko"&gt;
+    Pudełko nadrzędne (relative)
+    &lt;div class="element-absolutny"&gt;Absolutne&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<p>Poniżej możesz zobaczyć, jak szare pudełko nadrzędne tworzy wewnętrzny odstęp (padding) dla swojego tekstu. Z kolei złote pudełko wewnętrzne ignoruje ten padding, ponieważ zostało przypięte absolutnie bezpośrednio do prawego dolnego rogu swojego rodzica:</p>
+			<div class="example">
+				<div class="rodzic-pudelko">
+					Pudełko nadrzędne (relative)
+					<div class="element-absolutny">Absolutne</div>
+				</div>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji dowiesz się, jak zarządzać obramowaniem elementów oraz jak profesjonalnie zmieniać wygląd tabel za pomocą arkuszy stylów.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

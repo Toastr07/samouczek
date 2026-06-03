@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 6 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html" class="active">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 6: Odnośniki i kotwice</h2>
+			<p>
+				Hiperłącza umożliwiają poruszanie się między różnymi stronami internetowymi, zewnętrznymi plikami lub sekcjami w obrębie jednego dokumentu. Do ich tworzenia wykorzystuje się znacznik podwójny <code>&lt;a&gt;</code> wraz z atrybutem docelowym.
+			</p>
+		
+			<h3>Atrybuty i typy odnośników</h3>
+			<p>Atrybut <code>href=""</code> określa ścieżkę lub adres docelowy. Wpisanie pełnego adresu URL (np. z przedrostkiem https://) przenosi użytkownika na zewnętrzną witrynę.</p>
+			<p>Atrybut <code>target="_blank"</code> dodany do odnośnika wymusza otwarcie strony w nowej, osobnej karcie przeglądarki.</p>
+			<p>Zapis <code>href="mailto:adres@email.com"</code> wywołuje powiązanie systemowe, które automatycznie uruchamia domyślny program pocztowy użytkownika z wpisanym adresem odbiorcy.</p>
+			<p>Zapis <code>href="tel:+48000000000"</code> inicjuje połączenie telefoniczne, co jest szczególnie przydatne na urządzeniach mobilnych.</p>
+			<p>Nawigacja wewnętrzna (kotwica) wymaga użycia znaku <code>#</code> przed nazwą (np. <code>href="#kontakt"</code>). Informuje to przeglądarkę, że cel znajduje się na tej samej stronie w miejscu, gdzie dany element posiada unikalny identyfikator <code>id="kontakt"</code>.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Odnośniki i kotwice&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h3&gt;Spis treści (Kotwice)&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#sekcja-o-nas"&gt;Czytaj o nas&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sekcja-kontakt"&gt;Przejdź do kontaktu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Odwiedź witrynę &lt;a href="https://google.com" target="_blank"&gt;Google&lt;/a&gt; w nowej karcie.&lt;/p&gt;
+&lt;p&gt;Napisz do nas: &lt;a href="mailto:biuro@strona.pl"&gt;biuro@strona.pl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Zadzwoń: &lt;a href="tel:+48000000000"&gt;+48 000 000 000&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="sekcja-o-nas" style="margin-top: 40px;"&gt;Informacje o nas&lt;/h2&gt;
+&lt;p&gt;To jest sekcja opisująca naszą firmę, do której można bezpośrednio skoczyć.&lt;/p&gt;
+
+&lt;h2 id="sekcja-kontakt" style="margin-top: 40px;"&gt;Dane kontaktowe&lt;/h2&gt;
+&lt;p&gt;To jest sekcja kontaktowa na dole strony.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<div class="example">
+				<h3>Spis treści (Kotwice)</h3>
+				<ul>
+					<li><a href="#sekcja-o-nas">Czytaj o nas</a></li>
+					<li><a href="#sekcja-kontakt">Przejdź do kontaktu</a></li>
+				</ul>
+				<hr>
+				<p>Odwiedź witrynę <a href="https://google.com" target="_blank">Google</a> w nowej karcie.</p>
+				<p>Napisz do nas: <a href="mailto:biuro@strona.pl">biuro@strona.pl</a></p>
+				<p>Zadzwoń: <a href="tel:+48000000000">+48 000 000 000</a></p>
+				<h2 id="sekcja-o-nas" style="margin-top: 20px; font-size: 1.2em;">Informacje o nas</h2>
+				<p>To jest sekcja opisująca naszą firmę, do której można bezpośrednio skoczyć.</p>
+				<h2 id="sekcja-kontakt" style="margin-top: 20px; font-size: 1.2em;">Dane kontaktowe</h2>
+				<p>To jest sekcja kontaktowa na dole strony.</p>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji wzbogacisz strukturę strony o elementy multimedialne – pliki graficzne oraz wideo.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>

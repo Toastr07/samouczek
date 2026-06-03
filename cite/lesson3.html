@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 3 - HTML5 i CSS od podstaw</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 i CSS od podstaw</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona Główna</a></li>
+            <li><a href="https://github.com/Toastr07">Github</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <aside>
+            <h3>Spis lekcji</h3>
+            <ul>
+                <li><a href="lesson1.html">Lekcja 1: Wprowadzenie</a></li>
+                <li><a href="lesson2.html">Lekcja 2: Podstawowa struktura strony</a></li>
+                <li><a href="lesson3.html" class="active">Lekcja 3: Znaczniki związane z tekstem</a></li>
+                <li><a href="lesson4.html">Lekcja 4: Listy</a></li>
+                <li><a href="lesson5.html">Lekcja 5: Tabele</a></li>
+                <li><a href="lesson6.html">Lekcja 6: Odnośniki i kotwice</a></li>
+                <li><a href="lesson7.html">Lekcja 7: Multimedia</a></li>
+                <li><a href="lesson8.html">Lekcja 8: Formularze</a></li>
+                <li><a href="lesson9.html">Lekcja 9: Dodatkowe znaczniki i atrybuty</a></li>
+                <li><a href="lesson10.html">Lekcja 10: Wprowadzenie CSS</a></li>
+                <li><a href="lesson11.html">Lekcja 11: Model pudełkowy i pozycjonowanie</a></li>
+                <li><a href="lesson12.html">Lekcja 12: Obramowania i tabele</a></li>
+                <li><a href="lesson13.html">Lekcja 13: Właściwości związane z tłem</a></li>
+                <li><a href="lesson14.html">Lekcja 14: Menu poziome i pionowe</a></li>
+                <li><a href="lesson15.html">Lekcja 15: Strony responsywne</a></li>
+                <li><a href="lesson16.html">Lekcja 16: Animacje</a></li>
+            </ul>
+        </aside>
+
+		<main>
+			<h2>Lekcja 3: Znaczniki związane z tekstem</h2>
+			<p>
+				Do zarządzania tekstem w HTML5 stosuje się znaczniki semantyczne, które nadają treści odpowiednią strukturę i znaczenie dla wyszukiwarek. Wyróżniamy znaczniki blokowe (zaczynają się od nowej linii i zajmują całą szerokość) oraz liniowe (występują wewnątrz bieżącej linii tekstu).
+			</p>
+		
+			<h3>Przegląd znaczników tekstowych</h3>
+			<p>Znaczniki od <code>&lt;h1&gt;</code> do <code>&lt;h6&gt;</code> to nagłówki hierarchiczne. <code>&lt;h1&gt;</code> oznacza tytuł najważniejszy, a <code>&lt;h6&gt;</code> najmniej ważny.</p>
+			<p>Znacznik <code>&lt;p&gt;</code> to standardowy akapit tekstu. Jest elementem blokowym i automatycznie tworzy odstęp nad i pod tekstem.</p>
+			<p>Znacznik <code>&lt;strong&gt;</code> to element liniowy, który wizualnie pogrubia tekst oraz oznacza treść o dużym znaczeniu semantycznym.</p>
+			<p>Znacznik <code>&lt;b&gt;</code> pogrubia tekst wyłącznie w celach estetycznych, bez nadawania mu ważności dla wyszukiwarek.</p>
+			<p>Znacznik <code>&lt;em&gt;</code> służy do wyróżnienia konkretnego słowa lub frazy poprzez jego pochylenie (kursywę).</p>
+			<p>Znacznik <code>&lt;i&gt;</code> pochyla tekst ze względów czysto dekoracyjnych, na przykład dla zwrotów obcojęzycznych.</p>
+			<p>Znacznik <code>&lt;small&gt;</code> pomniejsza czoność, stosowany najczęściej do tekstów pobocznych lub zastrzeżeń prawnych.</p>
+			<p>Znaczniki <code>&lt;sub&gt;</code> i <code>&lt;sup&gt;</code> tworzą odpowiednio indeks dolny oraz indeks górny.</p>
+			<p>Znaczniki <code>&lt;ins&gt;</code> i <code>&lt;del&gt;</code> oznaczają tekst wstawiony (podkreślony) oraz usunięty (przekreślony).</p>
+			<p>Znacznik <code>&lt;mark&gt;</code> wyróżnia tekst jasnym, żółtym tłem, działając jak zakreślacz.</p>
+			<p>Znacznik <code>&lt;br&gt;</code> to znacznik pojedynczy, który wymusza przełamanie linii i przeniesienie dalszego tekstu do nowego wiersza bez tworzenia nowego akapitu.</p>
+			<p>Znacznik <code>&lt;hr&gt;</code> to znacznik pojedynczy blokowy, który rysuje poziomą linię oddzielającą sekcje tematyczne.</p>
+		
+			<code class="block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Formatowanie tekstu&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Formatowanie Tekstu w HTML5&lt;/h1&gt;
+&lt;h2&gt;Przykłady zastosowania znaczników&lt;/h2&gt;
+
+&lt;p&gt;To jest standardowy akapit. Możemy w nim &lt;strong&gt;pogrubić ważne słowo&lt;/strong&gt; lub użyć &lt;em&gt;kursywy do wyróżnienia&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Wzór na wodę to: H&lt;sub&gt;2&lt;/sub&gt;O, a powierzchnia pokoju wynosi 25 m&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Cena promocyjna wynosi: &lt;del&gt;99 zł&lt;/del&gt; &lt;ins&gt;&lt;mark&gt;49 zł&lt;/mark&gt;&lt;/ins&gt;!&lt;/p&gt;
+&lt;p&gt;Ten tekst zawiera informacje poboczne,&lt;br&gt;które zostały rozdzielone twardym przełamaniem linii,&lt;br&gt;&lt;small&gt;a te informacje zapisano małą czcionką.&lt;/small&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+		
+			<h3>Przykład działania</h3>
+			<div class="example">
+				<h1>Formatowanie Tekstu w HTML5</h1>
+				<h2>Przykłady zastosowania znaczników</h2>
+				<p>To jest standardowy akapit. Możemy w nim <strong>pogrubić ważne słowo</strong> lub użyć <em>kursywy do wyróżnienia</em>.</p>
+				<hr>
+				<p>Wzór na wodę to: H<sub>2</sub>O, a powierzchnia pokoju wynosi 25 m<sup>2</sup>.</p>
+				<p>Cena promocyjna wynosi: <del>99 zł</del> <ins><mark>49 zł</mark></ins>!</p>
+				<p>Ten tekst zawiera informacje poboczne,<br>które zostały rozdzielone twardym przełamaniem linii,<br><small>a te informacje zapisano małą czcionką.</small></p>
+			</div>
+		
+			<h2>Następna lekcja</h2>
+			<p>W następnej lekcji dowiesz się, jak organizować powiązane informacje za pomocą list wypunktowanych, numerowanych oraz list definicji.</p>
+		</main>
+    </div>
+
+    <footer>
+        <p>2026 HTML5 i CSS od podstaw</p>
+    </footer>
+
+</body>
+</html>
