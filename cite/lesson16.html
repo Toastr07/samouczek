@@ -9,17 +9,39 @@
     <link rel="stylesheet" href="../css/style.css">
     
 	<style>
-		div.example .przycisk {
-			background-color: black;
-			color: white;
-			padding: 10px 20px;
-			border: none;
-			cursor: pointer;
-			transition: background-color 0.5s ease;
-		}
-		div.example .przycisk:hover {
-			background-color: red;
-		}
+        div.example .przycisk {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 30px;
+        }
+
+        div.example .przycisk:hover {
+            background-color: #e74c3c;
+        }
+
+        div.example .pulsujacy-blok {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: inline-block;
+            vertical-align: middle;
+            animation-name: pulsowanie;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            border-radius: 8px;
+        }
+
+        @keyframes pulsowanie {
+            0% { transform: scale(1); background-color: #3498db; }
+            50% { transform: scale(1.1); background-color: #9b59b6; }
+            100% { transform: scale(1); background-color: #3498db; }
+        }
 	</style>
 </head>
 <body>
@@ -59,14 +81,21 @@
         </aside>
 
 		<main>
-			<h2>Lekcja 16: Animacje</h2>
+			<h2>Lekcja 16: Płynne przejścia i animacje</h2>
 			<p>
-				Najprostszą i najbardziej wydajną formą animacji w CSS jest właściwość płynnego przejścia wartości. Pozwala ona na łagodną zmianę wyglądu elementu w określonym przedziale czasowym, zamiast zmiany natychmiastowej.
+				CSS oferuje zaawansowane narzędzia do dynamicznej zmiany wyglądu elementów na stronie internetowej. Ruch możesz realizować na dwa sposoby: za pomocą płynnych przejść stanów (właściwość <code>transition</code>) lub poprzez tworzenie złożonych, zapętlonych animacji klatkowych (reguła <code>@keyframes</code>).
 			</p>
 		
-			<h3>Właściwość transition i pseudoklasa hover</h3>
-			<p>Pseudoklasa <code>:hover</code> aktywuje się automatycznie w momencie, gdy użytkownik umieści kursor myszy nad danym elementem na stronie.</p>
-			<p>Właściwość <code>transition</code> informuje przeglądarkę, że zmiana konkretnego stylu ma trwać określony czas (np. <code>0.5s</code> czyli pół sekundy) i odbywać się z naturalną płynnością <code>ease</code>.</p>
+			<h3>Płynne przejścia (transition)</h3>
+			<p>Właściwość <code>transition</code> pozwala na łagodną zmianę stylów w określonym czasie (np. po najechaniu myszką), zamiast zmiany natychmiastowej.</p>
+			<p>Pseudoklasa <code>:hover</code> aktywuje się automatycznie w momencie, gdy użytkownik umieści kursor myszy nad danym elementem na ekranie.</p>
+			<p>Zapis skrócony <code>transition: background-color 0.5s ease;</code> informuje przeglądarkę, że zmiana koloru tła ma trwać pół sekundy i odbywać się w sposób naturalny.</p>
+
+			<h3>Animacje klatkowe (@keyframes)</h3>
+			<p>Reguła <code>@keyframes</code> pozwala definiować własne animacje i precyzyzyjnie kontrolować ich przebieg w procentach (od <code>0%</code> do <code>100%</code>).</p>
+			<p>Właściwość <code>animation-name</code> wskazuje nazwę animacji, którą wcześniej utworzyłeś za pomocą reguły <code>@keyframes</code>.</p>
+			<p>Właściwość <code>animation-duration</code> określa łączny czas trwania jednego pełnego cyklu animacji podawany w sekundach.</p>
+			<p>Właściwość <code>animation-iteration-count</code> definiuje liczbę powtórzeń. Wartość <code>infinite</code> sprawia, że animacja działa bez końca.</p>
 		
 			<code class="block">&lt;!DOCTYPE html&gt;
 &lt;html lang="pl"&gt;
@@ -75,32 +104,51 @@
     &lt;title&gt;Animacje i przejścia&lt;/title&gt;
     &lt;style&gt;
         .przycisk {
-            background-color: black;
-            color: white;
+            background-color: #2c3e50;
+            color: #ffffff;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             transition: background-color 0.5s ease;
         }
         .przycisk:hover {
-            background-color: red;
+            background-color: #e74c3c;
+        }
+
+        .pulsujacy-blok {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            animation-name: pulsowanie;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes pulsowanie {
+            0% { transform: scale(1); background-color: #3498db; }
+            50% { transform: scale(1.1); background-color: #9b59b6; }
+            100% { transform: scale(1); background-color: #3498db; }
         }
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;button class="przycisk"&gt;Najedź na mnie&lt;/button>
+&lt;button class="przycisk"&gt;Najedź na mnie&lt;/button&gt;
+&lt;div class="pulsujacy-blok"&gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code>
 		
 			<h3>Przykład działania</h3>
+			<p>Poniżej możesz zobaczyć na żywo działanie obu mechanizmów ruchu CSS. Przycisk reaguje płynną zmianą koloru tła po najechaniu kursorem, natomiast niebieski kwadrat nieustannie pulsuje i zmienia barwę bez ingerencji użytkownika:</p>
+			
 			<div class="example">
 				<button class="przycisk">Najedź na mnie</button>
+				<div class="pulsujacy-blok"></div>
 			</div>
 		
 			<h2>Koniec kursu</h2>
-			<p>Gratulacje! Poznałeś podstawową strukturę, wszystkie najważniejsze znaczniki oraz zasady prawidłowego stylizowania nowoczesnych stron internetowych.</p>
+			<p>Gratulacje! Poznałeś podstawową strukturę HTML5, wszystkie najważniejsze znaczniki oraz zasady prawidłowego i nowoczesnego stylizowania stron za pomocą CSS.</p>
 		</main>
     </div>
 
